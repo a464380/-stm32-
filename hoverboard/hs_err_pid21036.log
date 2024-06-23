@@ -1,0 +1,200 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for Failed to commit area from 0x0000000704a00000 to 0x0000000714600000 of length 264241152.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3386), pid=21036, tid=20884
+#
+# JRE version:  (11.0.17+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.17+8, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djavax.net.ssl.trustStoreType=WINDOWS-ROOT com.st.microxplorer.maingui.STM32CubeMX E:\Git\gitapp2\hoverboard\OLED.ioc
+
+Host: 12th Gen Intel(R) Core(TM) i7-12650H, 16 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3085)
+Time: Sun Jun 23 23:11:12 2024  Windows 11 , 64 bit Build 22621 (10.0.22621.3085) elapsed time: 0.113125 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000228c1827000):  JavaThread "Unknown thread" [_thread_in_vm, id=20884, stack(0x000000c6a4700000,0x000000c6a4800000)]
+
+Stack: [0x000000c6a4700000,0x000000c6a4800000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61f5ba]
+V  [jvm.dll+0x7abf79]
+V  [jvm.dll+0x7ad668]
+V  [jvm.dll+0x7add43]
+V  [jvm.dll+0x24fd88]
+V  [jvm.dll+0x61c8ca]
+V  [jvm.dll+0x611055]
+V  [jvm.dll+0x307ccc]
+V  [jvm.dll+0x307b52]
+V  [jvm.dll+0x30c866]
+V  [jvm.dll+0x352caf]
+V  [jvm.dll+0x3526e0]
+V  [jvm.dll+0x2e4cd8]
+V  [jvm.dll+0x2e5e36]
+V  [jvm.dll+0x785db7]
+V  [jvm.dll+0x78753f]
+V  [jvm.dll+0x35fa29]
+V  [jvm.dll+0x768d20]
+V  [jvm.dll+0x3cd54f]
+V  [jvm.dll+0x3cf8e1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000228bf569be0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000228c1842800 GCTaskThread "GC Thread#0" [stack: 0x000000c6a4800000,0x000000c6a4900000] [id=13776]
+  0x00000228c18a0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000c6a4900000,0x000000c6a4a00000] [id=16660]
+  0x00000228c18a1000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000c6a4a00000,0x000000c6a4b00000] [id=14756]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9c4c944a7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000228c1823aa0] Heap_lock - owner thread: 0x00000228c1827000
+
+Heap address: 0x0000000704a00000, size: 4022 MB, Compressed Oops mode: Non-zero based: 0x0000000704a00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.110 Loaded shared library E:\编程软件\stm32cubemx\jre\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff75de80000 - 0x00007ff75de8d000 	E:\编程软件\stm32cubemx\jre\bin\javaw.exe
+0x00007ffa2fe90000 - 0x00007ffa300a7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa2e1a0000 - 0x00007ffa2e264000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa2d800000 - 0x00007ffa2dba6000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa29670000 - 0x00007ffa29707000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffa2d1d0000 - 0x00007ffa2d2e1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa23a60000 - 0x00007ffa23a77000 	E:\编程软件\stm32cubemx\jre\bin\jli.dll
+0x00007ffa2dff0000 - 0x00007ffa2e19e000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa2d6b0000 - 0x00007ffa2d6d6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa2dd80000 - 0x00007ffa2dda9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa2d6e0000 - 0x00007ffa2d7f8000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa2d2f0000 - 0x00007ffa2d38a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa19c10000 - 0x00007ffa19ea3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007ffa2e5d0000 - 0x00007ffa2e677000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa1b690000 - 0x00007ffa1b6a5000 	E:\编程软件\stm32cubemx\jre\bin\VCRUNTIME140.dll
+0x00007ffa2fcb0000 - 0x00007ffa2fce1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff9ee940000 - 0x00007ff9ee9db000 	E:\编程软件\stm32cubemx\jre\bin\msvcp140.dll
+0x00007ff9c49a0000 - 0x00007ff9c5522000 	E:\编程软件\stm32cubemx\jre\bin\server\jvm.dll
+0x00007ffa2df00000 - 0x00007ffa2dfb3000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa2dbe0000 - 0x00007ffa2dc88000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa2dbb0000 - 0x00007ffa2dbd8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffa2ece0000 - 0x00007ffa2edf7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa2de30000 - 0x00007ffa2de38000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa215c0000 - 0x00007ffa215ca000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa0b6d0000 - 0x00007ffa0b6d9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa21670000 - 0x00007ffa216a4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa2ddb0000 - 0x00007ffa2de21000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa2c210000 - 0x00007ffa2c228000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa290c0000 - 0x00007ffa290d0000 	E:\编程软件\stm32cubemx\jre\bin\verify.dll
+0x00007ffa2a8b0000 - 0x00007ffa2aae3000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa2e950000 - 0x00007ffa2ecd9000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa2fcf0000 - 0x00007ffa2fdc7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa0cd70000 - 0x00007ffa0cda2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa2d400000 - 0x00007ffa2d47a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa1b640000 - 0x00007ffa1b668000 	E:\编程软件\stm32cubemx\jre\bin\java.dll
+0x00007ffa29090000 - 0x00007ffa2909a000 	E:\编程软件\stm32cubemx\jre\bin\jimage.dll
+0x00007ffa1b4f0000 - 0x00007ffa1b508000 	E:\编程软件\stm32cubemx\jre\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;E:\编程软件\stm32cubemx\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100;E:\编程软件\stm32cubemx\jre\bi;E:\编程软件\stm32cubemx\jr;E:\编程软件\stm32cubem;E:\编程软件\stm32c
+
+VM Arguments:
+jvm_args: -Djavax.net.ssl.trustStoreType=WINDOWS-ROOT 
+java_command: com.st.microxplorer.maingui.STM32CubeMX E:\Git\gitapp2\hoverboard\OLED.ioc
+java_class_path (initial): E:\编程软件\stm32cubemx\STM32CubeMX.exe;anything
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4217372672                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7594288                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122031976                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122031976                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=E:\jdk
+PATH=E:\编程软件\stm32cubemx\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Recovery\OEM\Backup\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Recovery\OEM\Backup\;E:\编程软件\微信web开发者工具\dll;E:\编程环境\no;ejs\;E:\jdk\bin;E:\jdk\jre\bin;E:\编程软件\Xfttp\;C:\;rogram Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;F:\matlab\runtime\win64;F:\matlab\bin;C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility;E:\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\王\AppData\Local\Microsoft\WindowsApps;E:\编程软件\Microsoft VS Code\bin;C:\Users\王\AppData\Roaming\npm;D:\qq游戏\Hall.57986\;C:\Program Files\Azure Data Studio\bin;E:\编程软件\stm32cubemx\.\jre\\bin
+USERNAME=王
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\temp
+TEMP=C:\temp
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 11 , 64 bit Build 22621 (10.0.22621.3085)
+OS uptime: 3 days 3:26 hours
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x428, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 16087M (6047M free)
+TotalPageFile size 16087M (AvailPageFile size 236M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 71M, peak: 323M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.17+8) for windows-amd64 JRE (11.0.17+8), built on Oct 19 2022 00:04:05 by "" with MS VC++ 15.9 (VS2017)
+
+END.
